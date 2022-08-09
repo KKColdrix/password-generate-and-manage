@@ -23,7 +23,7 @@ def create(largo:int)->int:
 
 def login(ctr:str)->str:
     sleep(1)
-    with open("/Users/carlo/Desktop/data.json", "r") as file:
+    with open("directory", "r") as file:
         data = json.load(file)
         txt = data["root"]
         if ctr == txt: return 1
@@ -33,7 +33,7 @@ def login(ctr:str)->str:
 
 def look():
     sleep(1)
-    with open("/Users/carlo/Desktop/data.json", "r") as file:
+    with open("directory of json", "r") as file:
         data = json.load(file)
         txt = data["passwords"]
         for i in txt:
@@ -46,7 +46,7 @@ def look():
 def add(ctrAdd:str)->str:
     sleep(1)
     try:
-        with open ("/Users/carlo/Desktop/data.json") as file:
+        with open ("directory of jason") as file:
             rescribe = open("/Users/carlo/Desktop/data.json",'r+')
             data = json.load(file)
             data['passwords']+=[ctrAdd]
